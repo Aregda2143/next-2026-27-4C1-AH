@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Dashboard from '@/components/Dashboard';
 import CounterWithLog from '@/components/CounterWithLog';
+import TimerToggle from '@/components/TimerToggle';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,8 @@ export default function HomePage() {
 
       <h2>CounterWithLog</h2>
       <CounterWithLog />
+      <h2>TimerToggle</h2>
+      <TimerToggle />
     </main>
   );
 }
