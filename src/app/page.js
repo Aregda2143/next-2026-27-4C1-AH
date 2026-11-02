@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Dashboard from '@/components/Dashboard';
 import CounterWithLog from '@/components/CounterWithLog';
 import TimerToggle from '@/components/TimerToggle';
+import CounterDashboard from '@/components/CounterDashboard';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,8 @@ export default function HomePage() {
       <CounterWithLog />
       <h2>TimerToggle</h2>
       <TimerToggle />
+      <h2>CounterDashboard</h2>
+      <CounterDashboard />
     </main>
   );
 }
