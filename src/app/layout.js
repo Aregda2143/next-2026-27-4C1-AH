@@ -1,3 +1,4 @@
+import "./globals.css";
 import { CounterProvider } from '@/context/CounterContext';
 
 export default function RootLayout({ children }) {
