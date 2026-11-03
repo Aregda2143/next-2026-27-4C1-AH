@@ -1,5 +1,7 @@
 async function getPosts() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5', {
+    cache: 'no-store',
+  });
   if (!res.ok) {
     throw new Error('Nie udało się pobrać danych');
   }
