@@ -9,6 +9,7 @@ async function getPosts() {
 }
 
 export default async function PostsPage() {
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // 2 sekundy
   const posts = await getPosts();
 
   return (
