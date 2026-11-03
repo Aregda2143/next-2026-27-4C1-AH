@@ -8,6 +8,7 @@ import ContextCounterButton from '@/components/ContextCounterButton';
 import SimpleCounter from '@/components/SimpleCounter';
 import Badge from '@/components/Badge';
 import Card from '@/components/Card';
+import GreetingsFetcher from '@/components/GreetingsFetcher';
 
 export default function HomePage() {
   return (
@@ -55,6 +56,8 @@ export default function HomePage() {
         <Card title="Punkt 1">Treść 1</Card>
         <Card title="Punkt 2">Treść 2</Card>
       </div>
+       <h2>GreetingsFetcher</h2>
+      <GreetingsFetcher />
     </main>
     
 
