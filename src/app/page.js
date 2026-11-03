@@ -6,6 +6,7 @@ import CounterDashboard from '@/components/CounterDashboard';
 import ContextCounterDisplay from '@/components/ContextCounterDisplay';
 import ContextCounterButton from '@/components/ContextCounterButton';
 import SimpleCounter from '@/components/SimpleCounter';
+import Badge from '@/components/Badge';
 
 export default function HomePage() {
   return (
@@ -48,6 +49,7 @@ export default function HomePage() {
       </p>
       <h2>SimpleCounter</h2>
       <SimpleCounter />
+      <Badge>Nowość</Badge>
     </main>
   );
 }
