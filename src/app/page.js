@@ -5,6 +5,7 @@ import TimerToggle from '@/components/TimerToggle';
 import CounterDashboard from '@/components/CounterDashboard';
 import ContextCounterDisplay from '@/components/ContextCounterDisplay';
 import ContextCounterButton from '@/components/ContextCounterButton';
+import SimpleCounter from '@/components/SimpleCounter';
 
 export default function HomePage() {
   return (
@@ -41,9 +42,11 @@ export default function HomePage() {
         </div>
       </div>
       <p style={{ fontSize: '0.85rem', color: '#777' }}>
-        Kliknij przycisk w zielonej ramce (ContextCounterButton). Wartość w niebieskiej ramce
+        Kliknij przycisk w zielonej ramce (ContextCounterButton) — wartość w niebieskiej ramce
         (ContextCounterDisplay) zmieni się automatycznie, mimo że to dwa różne komponenty.
       </p>
+      <h2>SimpleCounter</h2>
+      <SimpleCounter />
     </main>
   );
 }
