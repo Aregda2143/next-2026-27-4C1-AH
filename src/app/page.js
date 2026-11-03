@@ -9,6 +9,7 @@ import SimpleCounter from '@/components/SimpleCounter';
 import Badge from '@/components/Badge';
 import Card from '@/components/Card';
 import GreetingsFetcher from '@/components/GreetingsFetcher';
+import ContactFormClient from '@/components/ContactFormClient';
 
 export default function HomePage() {
   return (
@@ -58,6 +59,8 @@ export default function HomePage() {
       </div>
        <h2>GreetingsFetcher</h2>
       <GreetingsFetcher />
+      <h2>Formularz</h2>
+      <ContactFormClient />
     </main>
     
 
