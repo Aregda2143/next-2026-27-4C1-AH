@@ -1,28 +1,21 @@
-async function submitContact(formData) {
-  'use server';
+'use client';
 
-  const name = formData.get('name');
-  const email = formData.get('email');
-
-  // Tu normalnie zapisalibyśmy dane np. do bazy danych
-  console.log('Nowe zgłoszenie:', { name, email });
-}
+import { useActionState } from 'react';
+import { submitContact } from './actions';
 
 export default function ContactPage() {
+  const [state, formAction, isPending] = useActionState(submitContact, { message: '' });
+
   return (
     <main style={{ padding: '2rem' }}>
       <h1>Kontakt</h1>
-      <form action={submitContact}>
-        <div>
-          <label htmlFor="name">Imię</label>
-          <input id="name" name="name" type="text" required />
-        </div>
-        <div>
-          <label htmlFor="email">E-mail</label>
-          <input id="email" name="email" type="email" required />
-        </div>
-        <button type="submit">Wyślij</button>
+      <form action={formAction}>
+        <input name="email" type="email" placeholder="Twój e-mail" required />
+        <button type="submit" disabled={isPending}>
+          {isPending ? 'Wysyłanie...' : 'Wyślij'}
+        </button>
       </form>
+      {state.message && <p>{state.message}</p>}
     </main>
   );
 }
